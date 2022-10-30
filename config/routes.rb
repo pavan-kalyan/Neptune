@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root 'home#index'
+  get 'sign-up' => 'home#sign_up'
+  post 'sign-up' => 'home#sign_up_new_user'
 end
