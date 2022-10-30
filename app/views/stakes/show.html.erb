@@ -1,0 +1,15 @@
+<h1>Stakes#show</h1>
+
+<div id="stakes">
+  <% @stakes.each do |stake| %>
+    <tr>
+      <td class="user"><%= User.get_user_name_by_id(stake.user_id) %></td>
+      <td class="company"><%= Company.get_company_name_by_id(stake.company_id) %></td>
+      <td class="stake"><%= stake.stake %></td>
+    </tr>
+  <% end %>
+</div>
+
+<div class="row">
+  <%= link_to 'Back to movie list', home_path, :class => 'btn btn-primary col-2' %>
+</div>
