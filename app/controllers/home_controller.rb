@@ -17,6 +17,7 @@ class HomeController < ApplicationController
     end
     if (user.password != params["password"])
       flash[:notice] = "incorrect password"
+      puts "failed to login"
       return
     end
 
@@ -25,7 +26,7 @@ class HomeController < ApplicationController
   
   def sign_up_new_user
     user_input = user_params
-    if (user_input['role'] != 'Employee' || user_input['role'] != 'Executive')
+    if (user_input['role'] != 'Employee' && user_input['role'] != 'Executive')
       flash[:notice] = "incorrect role"
       puts("INCORRECT ROLE")
       redirect_to sign_up_path
