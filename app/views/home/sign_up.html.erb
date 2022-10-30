@@ -1,5 +1,12 @@
 <!-- app/views/home/sign_up.html.erb -->
 <h2>Sign Up</h2>
+<% flash.each do |key, message| %>
+<!--    <div class="alert alert-danger">
+     <span class="error"><%= flash[:notice] %></span>
+   </div> -->
+  <p><%= message %></p>
+<% end %>
+  
 <div>
 <%= form_tag sign_up_path, :class => 'form' do %>
   <%= label :user,:email, 'Email', :class => 'col-form-label' %>
