@@ -13,6 +13,7 @@ class HomeController < ApplicationController
     user = User.find_by(email: params["email"])
     if (user.nil?) 
       flash[:notice] = "user does not exist"
+      puts "non existent user"
       return
     end
     if (user.password != params["password"])
@@ -33,16 +34,15 @@ class HomeController < ApplicationController
       return
     end
     company_name = params[:user]["company_name"]
-    puts(company_name)
     company = Company.find_by(name: company_name)
-    puts("searched for company")
-    if (company.nil? && user_input['role'] == 'Employee')
+    if (!Company.exists?(name: company_name) && user_input['role'] == 'Employee')
       flash[:notice] = "company does not exist"
       redirect_to sign_up_path
       return
-    elsif (company.nil?) 
+    elsif (!Company.exists?(name: company_name)) 
       puts("inserting company with name #{company_name}")
       company = Company.create!(name: company_name)
+      puts(company.id)
       puts(company.name)
     end
 
@@ -52,14 +52,14 @@ class HomeController < ApplicationController
       return
     end
     
-    user = User.find_by(email: user_input[:email]) 
+    user = User.find_by(email: user_input['email']) 
     if (!user.nil?)
       flash[:notice] = "email already exists"
       redirect_to sign_up_path
       return
     end
-    
-    user = User.create!(email: user_input[:email],password: user_input[:password], name: user_input[:name],role: user_input[:role],company_id: company.id)
+
+    user = User.create!(email: user_input['email'],password: user_input['password'], name: user_input['name'],role: user_input['role'],company_id: company.id)
     
     redirect_to employee_path(user.id)
   end
