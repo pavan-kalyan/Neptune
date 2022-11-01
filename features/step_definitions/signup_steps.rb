@@ -13,3 +13,44 @@ World(WithinHelpers)
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
+
+And /^(?:|I )follow (.+)$/ do |link|
+  click_link(link)
+end
+
+And /^(?:|I )press on (.+)$/ do |button|
+  click_button(button)
+end
+
+And /^(?:|I )should see (.+)$/ do |text|
+  page.should have_content(text)
+end
+
+Then /^(?:|I )should be on the (.+) page$/ do |header_name|
+  page.contains(header_name)
+end
+
+When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
+  fill_in(field, :with => value)
+end
+
+When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
+  fill_in(field, :with => value)
+end
+
+# Use this to fill in an entire form with data from a table. Example:
+#
+#   When I fill in the following:
+#     | Account Number | 5002       |
+#     | Expiry date    | 2009-11-01 |
+#     | Note           | Nice guy   |
+#     | Wants Email?   |            |
+#
+# based on naming conventions.
+#
+When /^(?:|I )fill in the following:$/ do |fields|
+  fields.rows_hash.each do |name, value|
+    fill_in(name, :with => value)
+    # When %{I fill in "#{name}" with "#{value}"}
+  end
+end

@@ -14,16 +14,34 @@ Background: users in database and an employee logs in
 
 Scenario: New Executive signs up successfully
   Given I am on the home page
-  And I click on Sign Up
-  Then I am on Sign Up page
-  And I input my email: pk@columbia.edu and password: pass and role: Executive and company: c1
-  And I click on Submit
-  Then I end up on a page with my email: pk@columbia.edu displayed
+  And I follow Sign Up
+  When I fill in the following:
+    | Email | pk@columbia.edu |
+    | Password | pass |
+    | Role | Executive |
+    | Company Name | c1 |
+  And I press on Sign Up
+  Then I should be on the Executive View page
 
 Scenario: New Employee signs up successfully
   Given I am on the home page
-  And I click on Sign Up
-  Then I am on Sign Up page
-  And I input my email: john@columbia.edu and password: pass and role: Employee and company: c1
-  And I click on Submit
-  Then I end up on a page with my email: john@columbia.edu displayed
+  And I follow Sign Up
+  When I fill in the following:
+    | Email | pk@columbia.edu |
+    | Password | pass |
+    | Role | Executive |
+    | Company Name | c1 |
+  And I press on Sign Up
+  Then I should be on the Employee View page
+
+
+Scenario: New Employee tries to sign up with a non-existent company
+  Given I am on the home page
+  And I follow Sign Up
+  When I fill in the following:
+    | Email | pk@columbia.edu |
+    | Password | pass |
+    | Role | Employee |
+    | Company Name | c1 |
+  And I press on Sign Up
+  Then I should see Sign Up
