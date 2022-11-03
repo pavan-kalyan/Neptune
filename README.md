@@ -23,3 +23,7 @@ tj2481 - Twisha Jain
 Heroku Link: https://stormy-eyrie-03532.herokuapp.com/
 
 GitHub Link: https://github.com/pavan-kalyan/Neptune
+
+
+**Note:**
+For iteration 1, data entries needs to be added via SQL directly to the DB.
