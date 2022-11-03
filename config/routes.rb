@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   post 'sign-up' => 'home#sign_up_new_user'
   get 'sign-in' => 'home#sign_in'
   post 'sign-in' => 'home#sign_in_user'
+  get 'employee' => 'stakes#show'
 end

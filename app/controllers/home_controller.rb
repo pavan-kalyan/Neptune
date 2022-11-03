@@ -22,7 +22,7 @@ class HomeController < ApplicationController
       return
     end
 
-    redirect_to employee_path(user.id)
+    redirect_to employee_path('user_id' => user.id)
   end
   
   def sign_up_new_user
@@ -61,7 +61,7 @@ class HomeController < ApplicationController
 
     user = User.create!(email: user_input['email'],password: user_input['password'], name: user_input['name'],role: user_input['role'],company_id: company.id)
     
-    redirect_to employee_path(user.id)
+    redirect_to employee_path('user_id' => user.id)
   end
   
    def user_params

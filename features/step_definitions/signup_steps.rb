@@ -23,11 +23,11 @@ And /^(?:|I )press on (.+)$/ do |button|
 end
 
 And /^(?:|I )should see (.+)$/ do |text|
-  page.should have_content(text)
+  expect(page.body).to have_content(text)
 end
 
 Then /^(?:|I )should be on the (.+) page$/ do |header_name|
-  page.contains(header_name)
+  expect(page.body).to have_content(header_name)
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|

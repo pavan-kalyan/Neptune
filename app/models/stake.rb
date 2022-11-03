@@ -1,3 +1,3 @@
 class Stake < ApplicationRecord
-  attr_accessor :id, :company_id, :user_id, :stake
+  # attr_accessor :c_id, :u_id, :value
 end

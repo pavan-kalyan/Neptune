@@ -7,12 +7,12 @@ Background: users in database and an employee logs in
 
   Given the following users exist:
   | email | name | password | role | company_id |
-  | abc1@gmail.com | Sid | password | employee | 1 |
-  | abc2@gmail.com | Pavan | password | executive | 1 |
-  | abc3@gmail.com | Twisha | password | employee | 1 |
-  | abc4@gmail.com | Ash | password | employee | 1 |
+  | abc1@gmail.com | Sid | password | Employee | 1 |
+  | abc2@gmail.com | Pavan | password | Executive | 1 |
+  | abc3@gmail.com | Twisha | password | Employee | 1 |
+  | abc4@gmail.com | Ash | password | Employee | 1 |
   Given the following stakes exist:
-  | company_id | user_id | stake |
+  | c_id | u_id | value |
   | 1    | 3 | 20 |
   | 1 | 4 | 20 |
   | 1    | 2 | 50 |
@@ -20,12 +20,16 @@ Background: users in database and an employee logs in
   Given the following companies exist:
   | name |
   | Martian | 
-  Given "Twisha" has logged in
+  Given I am on the home page
+  And I follow Sign In
+  When I fill in the following:
+    | email | abc3@gmail.com |
+    | password | password |
+  And I press on Sign In
 
 Scenario: view cap table as employee
-  When I go to the cap table page for "Martian"
-  Then I should see the stake of "Twisha" for "Martian"
-  And I should see the stake of "Pavan" for "Martian"
-  And I should see the stake of "Utkarsh" for "Martian"
-  And I should see the stake of "Sid" for "Martian"
+  Then I should be able to see the stake of "Twisha" for "Martian"
+  And I should not be able to see the stake of "Pavan" for "Martian"
+  And I should not be able to see the stake of "Utkarsh" for "Martian"
+  And I should not be able to see the stake of "Sid" for "Martian"
   And the stake of "Twisha" for "Martian" should be "20"
