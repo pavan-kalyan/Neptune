@@ -20,3 +20,11 @@ Scenario: User logs in
   And I press on Sign In
   Then I should be on the Employee View page
 
+Scenario: Non existent user tries to log in
+  Given I am on the home page
+  And I follow Sign In
+  When I fill in the following:
+    | email | pk1@columbia.edu |
+    | password | pass |
+  And I press on Sign In
+  Then I should see Sign In

@@ -14,11 +14,13 @@ class HomeController < ApplicationController
     if (user.nil?) 
       flash[:notice] = "user does not exist"
       puts "non existent user"
+      redirect_to sign_in_path
       return
     end
     if (user.password != params["password"])
       flash[:notice] = "incorrect password"
       puts "failed to login"
+      redirect_to sign_in_path
       return
     end
 
