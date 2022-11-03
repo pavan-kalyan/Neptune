@@ -34,3 +34,13 @@ Scenario: New Employee signs up successfully
   And I press on Sign Up
   Then I should be on the Employee View page
 
+Scenario: New Employee tries to sign up with a non-existent company
+  Given I am on the home page
+  And I follow Sign Up
+  When I fill in the following:
+    | Email | pk@columbia.edu |
+    | Password | pass |
+    | Role | Employee |
+    | Company Name | c1 |
+  And I press on Sign Up
+  Then I should see Sign Up
