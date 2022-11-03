@@ -1,10 +1,12 @@
 <h1>Employee View</h1>
 
 <div id="stakes">
-  <% @stakes.each do |stake| %>
-    <tr>
-      <p><%= User.get_user_name_by_id(stake.u_id) %> <%=Company.get_company_name_by_id(stake.c_id) %> <%=stake.value %></p>
-    </tr>
+  <% if !@stakes.nil? %>
+    <% @stakes.each do |stake| %>
+      <tr>
+        <p><%= User.get_user_name_by_id(stake.u_id) %> <%=Company.get_company_name_by_id(stake.c_id) %> <%=stake.value %></p>
+      </tr>
+      <% end %>
   <% end %>
 </div>
 
