@@ -12,6 +12,10 @@ This template was generated using `rails new` (after you install the `rails` gem
 
 Simply hit run! You can edit the run command from the `.replit` file.
 
+## Running the cucumber tests
+
+`bundle exec cucumber`
+
 ## Running commands
 
 Start every command with `bundle exec` so that it runs in the context of the installed gems environment. The console pane will give you output from the server but you can run arbitrary commands from the shell without stopping the server.
