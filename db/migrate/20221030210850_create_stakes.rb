@@ -4,6 +4,7 @@ class CreateStakes < ActiveRecord::Migration[7.0]
       t.string :company_name
       t.string :user_name
       t.string :stake
+      t.integer :c_id
 
       t.timestamps
     end
