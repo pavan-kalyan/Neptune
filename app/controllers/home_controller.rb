@@ -10,15 +10,20 @@ class HomeController < ApplicationController
   end
   
   def sign_in_user
+    if (params["email"].empty? || params["password"].empty?)
+      flash[:notice] = "Please provide both email and password."
+      redirect_to sign_in_path
+      return
+    end
     user = User.find_by(email: params["email"])
     if (user.nil?) 
-      flash[:notice] = "user does not exist"
+      flash[:notice] = "No user found"
       puts "non existent user"
       redirect_to sign_in_path
       return
     end
     if (user.password != params["password"])
-      flash[:notice] = "incorrect password"
+      flash[:notice] = "The given password is incorrect. "
       puts "failed to login"
       redirect_to sign_in_path
       return
