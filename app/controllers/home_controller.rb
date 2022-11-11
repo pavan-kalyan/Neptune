@@ -29,6 +29,8 @@ class HomeController < ApplicationController
   
   def sign_up_new_user
     user_input = user_params
+    user_input['role'] = params[:role]
+    puts(params)
     if (user_input['role'] != 'Employee' && user_input['role'] != 'Executive')
       flash[:notice] = "incorrect role"
       puts("INCORRECT ROLE")
@@ -44,8 +46,6 @@ class HomeController < ApplicationController
     elsif (!Company.exists?(name: company_name)) 
       puts("inserting company with name #{company_name}")
       company = Company.create!(name: company_name)
-      puts(company.id)
-      puts(company.name)
     end
 
     if (user_input[:email].blank?)

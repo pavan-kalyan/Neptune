@@ -22,7 +22,8 @@
   <%= text_field :user, :company_name, :class => 'form-control' %>
   <br/>
   <%= label :user, :role, 'Role', :class => 'col-form-label' %>
-  <%= text_field :user, :role, :class => 'form-control' %>
+  <%#= text_field :user, :role, :class => 'form-control' %>
+  <%= select_tag(:role, options_for_select([['Executive', "Executive"], ['Employee', "Employee"]])) %>
   <br/>
   <%= submit_tag 'Sign Up', :class => 'btn btn-primary' %>
 <% end %>

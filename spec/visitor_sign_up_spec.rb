@@ -5,7 +5,6 @@ RSpec.describe HomeController do
     it 'sign up email' do
 
       u = User.create!(email: 'e', name: 'e',role: 'Executive', password: 'pass')
-      # puts(u.email)
       expect(User.find_by(name: 'e').email== 'e').to be_truthy
     end
   end
