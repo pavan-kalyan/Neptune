@@ -9,7 +9,7 @@ class StakesController < ApplicationController
       @stakes = Stake.where(c_id: company_id)
     elsif type == "Employee"
       # puts Stake.where(u_id: user_id)
-      @stakes = Stake.where(u_id: User.find_by(id: user_id).name)
+      @stakes = Stake.where(u_id: user_id)
     end
   end
 end
