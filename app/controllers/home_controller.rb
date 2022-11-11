@@ -34,6 +34,12 @@ class HomeController < ApplicationController
   
   def sign_up_new_user
     user_input = user_params
+    #validate email id
+    if (not (params[:user]["email"] =~ URI::MailTo::EMAIL_REGEXP))
+      flash[:notice] = "Invalid Email"
+      redirect_to sign_up_path
+      return
+    end
     if (user_input['role'] != 'Employee' && user_input['role'] != 'Executive')
       flash[:notice] = "incorrect role"
       puts("INCORRECT ROLE")
