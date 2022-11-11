@@ -4,7 +4,7 @@
   <% if !@stakes.nil? %>
     <% @stakes.each do |stake| %>
       <tr>
-        <p><%= stake.user_name %> <%=Company.get_company_name_by_id(stake.c_id) %> <%=stake.value %></p>
+        <p><%= User.get_user_name_by_id(stake.u_id) %> <%=Company.get_company_name_by_id(stake.c_id) %> <%=stake.value %></p>
       </tr>
       <% end %>
   <% end %>

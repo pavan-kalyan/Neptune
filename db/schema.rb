@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2022_10_30_210850) do
 
   create_table "stakes", force: :cascade do |t|
     t.string "company_name"
-    t.string "user_name"
-    t.string "stake"
+    t.integer "u_id"
+    t.string "value"
     t.integer "c_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
