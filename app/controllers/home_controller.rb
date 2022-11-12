@@ -3,12 +3,6 @@ class HomeController < ApplicationController
   def index
   end
   
-  def sign_up
-  end
-  
-  def sign_in
-  end
-  
   def sign_in_user
     if (params["email"].empty? || params["password"].empty?)
       flash[:notice] = "Please provide both email and password."
@@ -42,12 +36,6 @@ class HomeController < ApplicationController
       redirect_to sign_up_path
       return
     end
-    if (user_input['role'] != 'Employee' && user_input['role'] != 'Executive')
-      flash[:notice] = "incorrect role"
-      puts("INCORRECT ROLE")
-      redirect_to sign_up_path
-      return
-    end
     company_name = params[:user]["company_name"]
     company = Company.find_by(name: company_name)
     if (!Company.exists?(name: company_name) && user_input['role'] == 'Employee')
@@ -59,13 +47,7 @@ class HomeController < ApplicationController
       company = Company.create!(name: company_name)
     end
 
-    if (user_input[:email].blank?)
-      flash[:notice] = "blank email"
-      redirect_to sign_up_path
-      return
-    end
-    
-    user = User.find_by(email: user_input['email']) 
+    user = User.find_by(email: user_input['email'])
     if (!user.nil?)
       flash[:notice] = "email already exists"
       redirect_to sign_up_path
