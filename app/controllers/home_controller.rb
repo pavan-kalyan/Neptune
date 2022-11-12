@@ -77,6 +77,13 @@ class HomeController < ApplicationController
     response.headers["Cache-Control"] = "no-cache, no-store"
     redirect_to employee_path('user_id' => user.id)
   end
+
+  def logout
+    session.delete("user_id")
+    flash[:notice] = "logged out successfully."
+    response.headers["Cache-Control"] = "no-cache, no-store"
+    redirect_to sign_in_path
+  end
   
    def user_params
     params.require(:user).permit(:name, :email, :password, :role, :company_name)

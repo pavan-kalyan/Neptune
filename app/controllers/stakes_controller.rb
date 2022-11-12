@@ -23,7 +23,7 @@ class StakesController < ApplicationController
       session.delete("user_id")
       flash[:notice] = "Unauthorized access. Please login."
       response.headers["Cache-Control"] = "no-cache, no-store"
-      redirect_to sign_up_path
+      redirect_to sign_in_path
     end
   end
 end
