@@ -35,7 +35,7 @@ class HomeController < ApplicationController
   def sign_up_new_user
     user_input = user_params
     user_input['role'] = params[:role]
-    puts(params)
+    # puts(params)
     #validate email id
     if (not (params[:user]["email"] =~ URI::MailTo::EMAIL_REGEXP))
       flash[:notice] = "Invalid Email"

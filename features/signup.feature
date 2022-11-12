@@ -18,8 +18,8 @@ Scenario: New Executive signs up successfully
   When I fill in the following:
     | Email | pk123@columbia.edu |
     | Password | pass |
-    | Role | Executive |
     | Company Name | c1 |
+  And I select Executive as role
   And I press on Sign Up
   Then I should be on the Employee View page
 
@@ -29,8 +29,8 @@ Scenario: New Employee signs up successfully
   When I fill in the following:
     | Email | pk1234@columbia.edu |
     | Password | pass |
-    | Role | Executive |
     | Company Name | c1 |
+  And I select Executive as role
   And I press on Sign Up
   Then I should be on the Employee View page
 
@@ -40,7 +40,7 @@ Scenario: New Employee tries to sign up with a non-existent company
   When I fill in the following:
     | Email | pk@columbia.edu |
     | Password | pass |
-    | Role | Employee |
     | Company Name | c1 |
+  And I select Employee as role
   And I press on Sign Up
   Then I should see Sign Up

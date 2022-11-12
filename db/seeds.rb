@@ -31,7 +31,6 @@ companies.each do |company|
 end
 
 users.each do |user|
-    puts user
     User.create!(user)
 end
 
