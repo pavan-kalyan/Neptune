@@ -1,9 +1,16 @@
 <h1>Employee View</h1>
 <div id="stakes">
   <% if !@stakes.nil? %>
+    <table>
+    <th> Name </th>
+    <th> Company Name </th>
+    <th> Stake </th>
     <% @stakes.each do |stake| %>
-        <p><%= User.get_user_name_by_id(stake.u_id) %> <%=Company.get_company_name_by_id(stake.c_id) %> <%=stake.value %></p>
+      <tr>
+        <td><%= User.get_user_name_by_id(stake.u_id) %></td><td> <%=Company.get_company_name_by_id(stake.c_id) %> </td><td><%=stake.value %></td>
+      </tr>
       <% end %>
+    </table>
   <% end %>
 </div>
 
