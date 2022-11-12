@@ -1,6 +1,32 @@
 {
   "RSpec": {
     "coverage": {
+      "/home/pavan/dev/Neptune/app/models/company.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/pavan/dev/Neptune/app/com/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/pavan/dev/Neptune/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/pavan/dev/Neptune/app/controllers/home_controller.rb": {
         "lines": [
           1,
@@ -73,32 +99,6 @@
       "/home/pavan/dev/Neptune/app/controllers/application_controller.rb": {
         "lines": [
           1,
-          null
-        ]
-      },
-      "/home/pavan/dev/Neptune/app/models/user.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/home/pavan/dev/Neptune/app/com/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/pavan/dev/Neptune/app/models/company.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          0,
-          null,
           null
         ]
       },
@@ -201,6 +201,6 @@
         }
       }
     },
-    "timestamp": 1668221399
+    "timestamp": 1668221685
   }
 }
