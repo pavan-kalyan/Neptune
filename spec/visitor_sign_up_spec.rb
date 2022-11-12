@@ -165,5 +165,55 @@ RSpec.describe HomeController, :type => :controller do
       expect(response).to have_http_status 302
       expect(response).to redirect_to("/sign-up")
     end
+    it "sign up with empty company" do
+      params = {
+        "user": {
+          "email": "abc@gmail.com",
+          "name": "abc",
+          "password": "pass",
+          "company_name": "",
+        },
+        "role": "Executive",
+      }
+      post :sign_up_new_user, params: params
+      expect(response).to have_http_status 302
+      expect(response).to redirect_to("/sign-up")
+    end
+    it "sign up with empty password" do
+      params = {
+        "user": {
+          "email": "abc@gmail.com",
+          "name": "abc",
+          "password": "",
+          "company_name": "comp",
+        },
+        "role": "Executive",
+      }
+      post :sign_up_new_user, params: params
+      expect(response).to have_http_status 302
+      expect(response).to redirect_to("/sign-up")
+    end
+    it "sign up with empty name" do
+      params = {
+        "user": {
+          "email": "abc@gmail.com",
+          "name": "",
+          "password": "pass",
+          "company_name": "comp",
+        },
+        "role": "Executive",
+      }
+      post :sign_up_new_user, params: params
+      expect(response).to have_http_status 302
+      expect(response).to redirect_to("/sign-up")
+    end
+    it "user logs out" do
+      session = {
+        "user_id": 1
+      }
+      get(:logout, params: nil, session: session)
+      expect(response).to have_http_status 302
+      expect(response).to redirect_to("/sign-in")
+    end
   end
 end
