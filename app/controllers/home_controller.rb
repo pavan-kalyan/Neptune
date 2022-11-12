@@ -36,10 +36,26 @@ class HomeController < ApplicationController
       redirect_to sign_up_path
       return
     end
+
     company_name = params[:user]["company_name"]
+    if (company_name.empty?)
+      flash[:notice] = "Please provide company name."
+      redirect_to sign_up_path
+      return
+    end
+    if (user_input['password'].empty?)
+      flash[:notice] = "Please provide password."
+      redirect_to sign_up_path
+      return
+    end
+    if (params[:user]["name"].empty?)
+      flash[:notice] = "Please provide name."
+      redirect_to sign_up_path
+      return
+    end
     company = Company.find_by(name: company_name)
     if (!Company.exists?(name: company_name) && user_input['role'] == 'Employee')
-      flash[:notice] = "company does not exist"
+      flash[:notice] = "This company does not exist."
       redirect_to sign_up_path
       return
     elsif (!Company.exists?(name: company_name)) 
