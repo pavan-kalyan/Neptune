@@ -23,6 +23,8 @@ class HomeController < ApplicationController
       return
     end
 
+    response.headers["Cache-Control"] = "no-cache, no-store"
+    session["user_id"] = user.id
     redirect_to employee_path('user_id' => user.id)
   end
   
@@ -71,7 +73,8 @@ class HomeController < ApplicationController
     end
 
     user = User.create!(email: user_input['email'],password: user_input['password'], name: user_input['name'],role: user_input['role'],company_id: company.id)
-    
+
+    response.headers["Cache-Control"] = "no-cache, no-store"
     redirect_to employee_path('user_id' => user.id)
   end
   
