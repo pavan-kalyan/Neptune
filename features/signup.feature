@@ -18,6 +18,7 @@ Scenario: New Executive signs up successfully
   When I fill in the following:
     | Email | pk123@columbia.edu |
     | Password | pass |
+    | Name | Test1 |
     | Company Name | c1 |
   And I select Executive as role
   And I press on Sign Up
@@ -29,6 +30,7 @@ Scenario: New Employee signs up successfully
   When I fill in the following:
     | Email | pk1234@columbia.edu |
     | Password | pass |
+    | Name | Test1 |
     | Company Name | c1 |
   And I select Executive as role
   And I press on Sign Up

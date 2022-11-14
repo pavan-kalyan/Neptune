@@ -1,18 +1,29 @@
-<h1>Employee View</h1>
-<div id="stakes">
+<h1>Welcome 
+  <%= @user_name %>
+</h1>
+
+<h3>Employee View</h3>
+
+<p> Your role at 
+  <%= @company_name %>
+  is
+  <%= @role %>
+</p>
+<div id="stakes", style="width:800px; margin:0 auto;">
   <% if !@stakes.nil? %>
-    <table>
-    <th> Name </th>
-    <th> Company Name </th>
-    <th> Stake </th>
-    <% @stakes.each do |stake| %>
-      <tr>
-        <td><%= User.get_user_name_by_id(stake.u_id) %></td><td> <%=Company.get_company_name_by_id(stake.c_id) %> </td><td><%=stake.value %></td>
-      </tr>
+    <table border="1">
+      <th> Name </th>
+      <th> Company Name </th>
+      <th> Stake </th>
+      <% @stakes.each do |stake| %>
+        <tr>
+          <td><%= link_to(User.get_user_name_by_id(stake.u_id), "/edit-stake?user_id=#{@user_id}&employee_id=#{stake.u_id}") %></td><td> <%=Company.get_company_name_by_id(stake.c_id) %> </td><td><%=stake.value %></td>
+        </tr>
       <% end %>
     </table>
   <% end %>
 </div>
 
-
-<%= link_to 'Logout', logout_path, :class => 'btn btn-primary col-2' %>
+<p>
+  <%= link_to 'Logout', logout_path, :class => 'btn btn-primary col-2' %>
+</p>

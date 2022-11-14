@@ -73,8 +73,10 @@ class HomeController < ApplicationController
     end
 
     user = User.create!(email: user_input['email'],password: user_input['password'], name: user_input['name'],role: user_input['role'],company_id: company.id)
+    stake = Stake.create!(c_id: company.id, u_id: user.id, value: '0')
 
     response.headers["Cache-Control"] = "no-cache, no-store"
+    session["user_id"] = user.id
     redirect_to employee_path('user_id' => user.id)
   end
 
@@ -82,7 +84,7 @@ class HomeController < ApplicationController
     session.delete("user_id")
     flash[:notice] = "logged out successfully."
     response.headers["Cache-Control"] = "no-cache, no-store"
-    redirect_to sign_in_path
+    redirect_to ''
   end
   
    def user_params

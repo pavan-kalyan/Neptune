@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get 'sign-in' => 'home#sign_in'
   post 'sign-in' => 'home#sign_in_user'
   get 'employee' => 'stakes#show'
+  get 'edit-stake' => 'stakes#edit'
+  post 'edit-stake' => 'stakes#edit_stake'
   get 'logout' => 'home#logout'
 end
