@@ -15,6 +15,7 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
 end
 
 And /^(?:|I )follow (.+)$/ do |link|
+  puts page.body
   click_link(link)
 end
 
