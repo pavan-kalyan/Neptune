@@ -1,0 +1,22 @@
+
+<% flash.each do |key, message| %>
+    <p><%= message %></p>
+<% end %>
+
+<% if !@stake.nil? %>
+    <h1>Edit stake for <%= User.get_user_name_by_id(@stake.u_id) %></h1>
+    <p> Company Name: <%=Company.get_company_name_by_id(@stake.c_id) %></p>
+        
+    <div>
+        <%= form_tag(edit_stake_path(:user_id => @user_id, :employee_id => @stake.u_id), :method => "post") do %>
+            <%= label :stake, 'Stake', :class => 'col-form-label' %>
+            <%= text_field_tag(:stake) %>
+            <%= submit_tag 'Save', :class => 'btn btn-primary' %>
+        <% end %>
+    </div>
+
+<% end %>
+
+<p>
+    <%= link_to 'Back', employee_path('user_id' => @user_id), :class => 'btn btn-primary col-2' %>
+</p>
