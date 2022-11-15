@@ -245,7 +245,7 @@
   },
   "Cucumber Features": {
     "coverage": {
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/models/user.rb": {
+      "/Users/twisha/Desktop/Neptune/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -257,21 +257,21 @@
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/com/application_record.rb": {
+      "/Users/twisha/Desktop/Neptune/app/com/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/models/stake.rb": {
+      "/Users/twisha/Desktop/Neptune/app/models/stake.rb": {
         "lines": [
           1,
           null,
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/models/company.rb": {
+      "/Users/twisha/Desktop/Neptune/app/models/company.rb": {
         "lines": [
           1,
           null,
@@ -284,7 +284,7 @@
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/controllers/home_controller.rb": {
+      "/Users/twisha/Desktop/Neptune/app/controllers/home_controller.rb": {
         "lines": [
           1,
           1,
@@ -381,25 +381,25 @@
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/controllers/application_controller.rb": {
+      "/Users/twisha/Desktop/Neptune/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/helpers/application_helper.rb": {
+      "/Users/twisha/Desktop/Neptune/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/helpers/stakes_helper.rb": {
+      "/Users/twisha/Desktop/Neptune/app/helpers/stakes_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/controllers/stakes_controller.rb": {
+      "/Users/twisha/Desktop/Neptune/app/controllers/stakes_controller.rb": {
         "lines": [
           null,
           1,
@@ -464,7 +464,7 @@
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/channels/application_cable/channel.rb": {
+      "/Users/twisha/Desktop/Neptune/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -474,7 +474,7 @@
         "branches": {
         }
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/channels/application_cable/connection.rb": {
+      "/Users/twisha/Desktop/Neptune/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -484,7 +484,7 @@
         "branches": {
         }
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/jobs/application_job.rb": {
+      "/Users/twisha/Desktop/Neptune/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -497,7 +497,7 @@
         "branches": {
         }
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/mailers/application_mailer.rb": {
+      "/Users/twisha/Desktop/Neptune/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -507,7 +507,7 @@
         "branches": {
         }
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/models/application_record.rb": {
+      "/Users/twisha/Desktop/Neptune/app/models/application_record.rb": {
         "lines": [
           0,
           0,
@@ -517,6 +517,6 @@
         }
       }
     },
-    "timestamp": 1668487960
+    "timestamp": 1668488211
   }
 }
