@@ -55,9 +55,6 @@ class StakesController < ApplicationController
       stake.value = new_stake_value
       stake.save
       puts "new stake value saved"
-    else
-      flash[:notice] = "Action not allowed"
-      puts "Employee can't perform Executive actions"
     end
     redirect_to(employee_path('user_id' => user_id))
   end

@@ -64,5 +64,15 @@ Scenario: go back without saving stake
     And I follow Ash
     And I fill in the following:
         | stake | 1000 |
-    And I press on Back
+    And I follow Back
     Then the stake of "Ash" for "Martian" should be "20"
+
+Scenario: edit stake as an employee
+    Given I am on the home page
+    And I follow Sign In
+    When I fill in the following:
+        | email | abc3@gmail.com |
+        | password | password |
+    And I press on Sign In
+    And I go to edit stake page with employee_id 3 and user_id 2
+    Then I should be on the Unauthorized access page

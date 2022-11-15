@@ -1,20 +1,30 @@
 require_relative '../../config/environment'
 
+Given /I go to edit stake page with employee_id (.*) and user_id (.*)/ do |employee_id, user_id|
+  visit "/edit-stake?user_id=#{user_id}&employee_id=#{employee_id}"
+end
+
 Given /the following users exist/ do |users_table|
   users_table.hashes.each do |user|
-    User.create!(user)
+    if !User.exists?(:email => user["email"])
+      User.create!(user)
+    end
   end
 end
 
 Given /the following stakes exist/ do |stakes_table|
   stakes_table.hashes.each do |stake|
-    Stake.create!(stake)
+    if !Stake.exists?(:u_id => stake["u_id"])
+      Stake.create!(stake)
+    end
   end
 end
 
 Given /the following companies exist/ do |company_table|
   company_table.hashes.each do |company|
-    Company.create!(company)
+    if !Company.exists?(:name => company["name"])
+      Company.create!(company)
+    end
   end
 end
 

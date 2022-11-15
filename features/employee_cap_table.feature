@@ -23,13 +23,13 @@ Background: users in database and an employee logs in
   Given I am on the home page
   And I follow Sign In
   When I fill in the following:
-    | email | abc3@gmail.com |
+    | email | abc1@gmail.com |
     | password | password |
   And I press on Sign In
 
 Scenario: view cap table as employee
-  Then I should be able to see the stake of "Twisha" for "Martian"
+  Then I should be able to see the stake of "Sid" for "Martian"
   And I should not be able to see the stake of "Pavan" for "Martian"
   And I should not be able to see the stake of "Utkarsh" for "Martian"
-  And I should not be able to see the stake of "Sid" for "Martian"
-  And the stake of "Twisha" for "Martian" should be "20"
+  And I should not be able to see the stake of "Twisha" for "Martian"
+  And the stake of "Sid" for "Martian" should be "10"
