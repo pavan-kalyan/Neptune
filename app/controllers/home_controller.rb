@@ -82,7 +82,6 @@ class HomeController < ApplicationController
 
   def logout
     session.delete("user_id")
-    flash[:notice] = "logged out successfully."
     response.headers["Cache-Control"] = "no-cache, no-store"
     redirect_to ''
   end

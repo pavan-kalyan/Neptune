@@ -14,7 +14,7 @@ module NavigationHelpers
     # puts(page_name)
     case page_name
 
-    when /^the (RottenPotatoes )?home\s?page$/ then '/'
+    when /^the home\s?page$/ then '/'
 
     return '/'
     when /^the Sign Up\s?page$/

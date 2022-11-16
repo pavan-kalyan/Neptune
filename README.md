@@ -30,3 +30,8 @@ To sign in - users enter their credentials and depending on their role during si
 
 example input to login as Employee: email(abc3@gmail.com) and password(password).
 example input to login as Executive: email(abc2@gmail.com) and password(password).
+
+Upon sign in, employees can view their stake in a company. If they try to edit their stake by clicking on their name they receive an error message.
+Upon sign in, executives can edit the stake of all employees in their company. These stakes are then saved and the changes are visible to both the employee and the executive.
+
+

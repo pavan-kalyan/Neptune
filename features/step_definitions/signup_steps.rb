@@ -20,6 +20,7 @@ And /^(?:|I )follow (.+)$/ do |link|
 end
 
 And /^(?:|I )press on (.+)$/ do |button|
+  # puts page.body
   click_button(button)
 end
 
