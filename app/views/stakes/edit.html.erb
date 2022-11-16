@@ -10,7 +10,7 @@
     <div>
         <%= form_tag(edit_stake_path(:user_id => @user_id, :employee_id => @stake.u_id), :method => "post") do %>
             <%= label :stake, 'Stake', :class => 'col-form-label' %>
-            <%= text_field_tag(:stake) %>
+            <%= number_field_tag(:stake, nil, {step:0.01, min:0}) %>
             <%= submit_tag 'Save', :class => 'btn btn-primary' %>
         <% end %>
     </div>
