@@ -213,7 +213,7 @@ RSpec.describe HomeController, :type => :controller do
       }
       get(:logout, params: nil, session: session)
       expect(response).to have_http_status 302
-      expect(response).to redirect_to("/sign-in")
+      expect(response).to redirect_to("")
     end
   end
 end
