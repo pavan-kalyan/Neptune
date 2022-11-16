@@ -57,5 +57,6 @@ class StakesController < ApplicationController
       puts "new stake value saved"
     end
     redirect_to(employee_path('user_id' => user_id))
+    flash[:notice] = ""
   end
 end
