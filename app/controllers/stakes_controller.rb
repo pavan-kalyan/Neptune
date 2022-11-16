@@ -1,6 +1,7 @@
 
 class StakesController < ApplicationController
   def show
+    flash[:message]=""
     user_id = params[:user_id] # retrieve movie ID from URI route
     @user_id = user_id
     @user_name = User.get_user_name_by_id(user_id)
@@ -56,7 +57,7 @@ class StakesController < ApplicationController
       stake.save
       puts "new stake value saved"
     end
-    redirect_to(employee_path('user_id' => user_id))
     flash[:notice] = ""
+    redirect_to(employee_path('user_id' => user_id))
   end
 end
