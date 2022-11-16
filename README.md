@@ -18,6 +18,10 @@ tj2481 - Twisha Jain
 
 `bundle exec cucumber`
 
+## Running the rspec tests
+
+`bundle exec rspec`
+
 Heroku Link: https://stormy-eyrie-03532.herokuapp.com/
 
 GitHub Link: https://github.com/pavan-kalyan/Neptune
