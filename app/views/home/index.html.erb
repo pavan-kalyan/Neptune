@@ -1,7 +1,17 @@
-<h1> Neptune</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+    <img src="/assets/neptune.jpeg" width="60" height="60" class="d-inline-block align-top" alt>
+    <h1>Neptune</h1>
+  </a>
+</nav>
 
-<div>
-<%= link_to 'Sign Up', sign_up_path, :class => 'btn btn-primary col-2' %>
-</br>
-<%= link_to 'Sign In', sign_in_path, :class => 'btn btn-primary col-2' %>
+<div class="center">
+  <div class="home_container">
+    <h3>Welcome to Neptune!</h3>
+    <p>A new Web3 cap management tool</p>
+    </br>
+    <%= link_to 'Sign Up', sign_up_path, :class => 'btn btn-primary col-2' %>
+    </br>
+    <%= link_to 'Sign In', sign_in_path, :class => 'btn btn-primary col-2' %>
+  </div>
 </div>

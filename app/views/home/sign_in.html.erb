@@ -1,20 +1,33 @@
 <!-- app/views/home/sign_up.html.erb -->
-<h2>Sign In</h2>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+    <img src="/assets/neptune.jpeg" width="60" height="60" class="d-inline-block align-top" alt>
+    <h1>Neptune</h1>
+  </a>
+</nav>
+
 <% flash.each do |key, message| %>
 <!--    <div class="alert alert-danger">
      <span class="error"><%= flash[:notice] %></span>
    </div> -->
   <p><%= message %></p>
 <% end %>
-  
-<div>
+
+<div class="center">
+  <div class="home_container">
+    <h2>Sign In</h2>
+    </br>
+    </br>
+<!--<div>-->
 <%= form_tag(sign_in_path, :method => "post") do %>
   <%= label :email, 'Email', :class => 'col-form-label' %>
-  <%= text_field_tag(:email) %>
+  <%= text_field_tag(:email, nil, :class => 'form-control') %>
   <br/>
+      <br/>
   <%= label :password, 'Password'%>
-  <%= text_field_tag(:password) %>
+  <%= text_field_tag(:password, nil, :class => 'form-control') %>
   <br/>
   <%= submit_tag 'Sign In', :class => 'btn btn-primary' %>
 <% end %>
 </div>
+  </div>
