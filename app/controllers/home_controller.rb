@@ -46,6 +46,13 @@ class HomeController < ApplicationController
       redirect_to sign_up_path
       return
     end
+
+    if (Company.exists?(name: company_name) && user_input['role'] == 'Executive')
+      flash[:notice] = "This company already has an executive."
+      redirect_to sign_up_path
+      return 
+    end
+
     if (user_input['password'].empty?)
       flash[:notice] = "Please provide password."
       redirect_to sign_up_path
