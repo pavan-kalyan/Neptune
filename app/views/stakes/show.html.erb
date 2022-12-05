@@ -29,9 +29,10 @@
         <th scope="col"> Name </th>
         <th scope="col"> Company Name </th>
         <th scope="col"> Stake </th>
+        <th scope="col"> Percentage Stake </th>
         <% @stakes.each do |stake| %>
           <tr scope="row">
-            <td><%= link_to(User.get_user_name_by_id(stake.u_id), "/edit-stake?user_id=#{@user_id}&employee_id=#{stake.u_id}", :class => 'btn btn-secondary col-2') %></td><td> <%=Company.get_company_name_by_id(stake.c_id) %> </td><td><%=stake.value %></td>
+            <td><%= link_to(User.get_user_name_by_id(stake.u_id), "/edit-stake?user_id=#{@user_id}&employee_id=#{stake.u_id}", :class => 'btn btn-secondary col-2') %></td><td> <%=Company.get_company_name_by_id(stake.c_id) %> </td><td><%=stake.value %></td><td><%=Stake.get_percentage_stake(stake) %></td>
           </tr>
         <% end %>
       </table>
