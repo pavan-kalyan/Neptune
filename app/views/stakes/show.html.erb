@@ -1,29 +1,47 @@
-<h1>Welcome 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+    <img src="/assets/neptune.jpeg" width="60" height="60" class="d-inline-block align-top" alt>
+    <h1>Neptune</h1>
+  </a>
+</nav>
+
+<br>
+<br>
+<br>
+<br>
+<h1>Welcome
   <%= @user_name %>
 </h1>
 
-<h3>Employee View</h3>
+<div class="container">
+  <div class="home_container">
+    <h3>Employee View</h3>
+    <p> Your role at
+      <%= @company_name %>
+      is
+      <%= @role %>
+    </p>
+  </div>
 
-<p> Your role at 
-  <%= @company_name %>
-  is
-  <%= @role %>
-</p>
-<div id="stakes", style="width:800px; margin:0 auto;">
-  <% if !@stakes.nil? %>
-    <table border="1">
-      <th> Name </th>
-      <th> Company Name </th>
-      <th> Stake </th>
-      <% @stakes.each do |stake| %>
-        <tr>
-          <td><%= link_to(User.get_user_name_by_id(stake.u_id), "/edit-stake?user_id=#{@user_id}&employee_id=#{stake.u_id}", :class => 'btn btn-primary col-2') %></td><td> <%=Company.get_company_name_by_id(stake.c_id) %> </td><td><%=stake.value %></td>
-        </tr>
-      <% end %>
-    </table>
-  <% end %>
+  <div id="stakes", style="width:800px; margin:0 auto;">
+    <% if !@stakes.nil? %>
+      <table class="table table-bordered table-striped">
+        <th scope="col"> Name </th>
+        <th scope="col"> Company Name </th>
+        <th scope="col"> Stake </th>
+        <th scope="col"> Percentage Stake </th>
+        <% @stakes.each do |stake| %>
+          <tr scope="row">
+            <td><%= link_to(User.get_user_name_by_id(stake.u_id), "/edit-stake?user_id=#{@user_id}&employee_id=#{stake.u_id}", :class => 'btn btn-secondary col-2') %></td><td> <%=Company.get_company_name_by_id(stake.c_id) %> </td><td><%=stake.value %></td><td><%=Stake.get_percentage_stake(stake) %></td>
+          </tr>
+        <% end %>
+      </table>
+    <% end %>
+  </div>
+
+  <div class="home_container">
+  <p>
+    <%= link_to 'Logout', logout_path, :class => 'btn btn-primary col-2' %>
+  </p>
+  </div>
 </div>
-
-<p>
-  <%= link_to 'Logout', logout_path, :class => 'btn btn-primary col-2' %>
-</p>
