@@ -12,6 +12,6 @@ class Stake < ApplicationRecord
     end
     puts _stake.value
     puts den
-    return _stake.value.to_f/den
+    return (_stake.value.to_f/den) * 100
   end
 end
