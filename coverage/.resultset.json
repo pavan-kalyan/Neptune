@@ -252,7 +252,7 @@
   },
   "Cucumber Features": {
     "coverage": {
-      "/Users/twisha/Desktop/Neptune/app/models/user.rb": {
+      "/home/pavan/dev/Neptune/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -261,14 +261,14 @@
           null
         ]
       },
-      "/Users/twisha/Desktop/Neptune/app/com/application_record.rb": {
+      "/home/pavan/dev/Neptune/app/com/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/twisha/Desktop/Neptune/app/models/stake.rb": {
+      "/home/pavan/dev/Neptune/app/models/stake.rb": {
         "lines": [
           1,
           null,
@@ -289,7 +289,7 @@
           null
         ]
       },
-      "/Users/twisha/Desktop/Neptune/app/models/company.rb": {
+      "/home/pavan/dev/Neptune/app/models/company.rb": {
         "lines": [
           1,
           null,
@@ -302,7 +302,7 @@
           null
         ]
       },
-      "/Users/twisha/Desktop/Neptune/app/controllers/home_controller.rb": {
+      "/home/pavan/dev/Neptune/app/controllers/home_controller.rb": {
         "lines": [
           1,
           1,
@@ -406,31 +406,31 @@
           null
         ]
       },
-      "/Users/twisha/Desktop/Neptune/app/controllers/application_controller.rb": {
+      "/home/pavan/dev/Neptune/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/twisha/Desktop/Neptune/app/helpers/application_helper.rb": {
+      "/home/pavan/dev/Neptune/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/twisha/Desktop/Neptune/app/helpers/profile_helper.rb": {
+      "/home/pavan/dev/Neptune/app/helpers/profile_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/twisha/Desktop/Neptune/app/helpers/stakes_helper.rb": {
+      "/home/pavan/dev/Neptune/app/helpers/stakes_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/twisha/Desktop/Neptune/app/controllers/stakes_controller.rb": {
+      "/home/pavan/dev/Neptune/app/controllers/stakes_controller.rb": {
         "lines": [
           null,
           1,
@@ -498,7 +498,7 @@
           null
         ]
       },
-      "/Users/twisha/Desktop/Neptune/app/controllers/profile_controller.rb": {
+      "/home/pavan/dev/Neptune/app/controllers/profile_controller.rb": {
         "lines": [
           1,
           null,
@@ -540,6 +540,6 @@
         ]
       }
     },
-    "timestamp": 1671484793
+    "timestamp": 1671485372
   }
 }
