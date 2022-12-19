@@ -6,11 +6,11 @@ Feature: sign in
 
     Given the following users exist:
       | email | name | password | role | company_id | plan |
-      | abc1@gmail.com | Sid | password | Employee | 1 | Free |
-      | pk@columbia.edu | Pavan | password | Executive | 1 | Free |
-      | abc3@gmail.com | Twisha | password | Employee | 1 | Free  |
-      | abc4@gmail.com | Ash | password | Employee | 1 | Free     |
-      | abc2@gmail.com | Pavan | password | Executive | 1 | Paid  |
+      | abc1@gmail.com | Sid | password | Employee | 1 | Standard |
+      | pk@columbia.edu | Pavan | password | Executive | 1 | Standard |
+      | abc3@gmail.com | Twisha | password | Employee | 1 | Standard  |
+      | abc4@gmail.com | Ash | password | Employee | 1 | Standard     |
+      | abc2@gmail.com | Pavan | password | Executive | 1 | Premium  |
     Given the following stakes exist:
       | c_id | u_id | value |
       | 1    | 3 | 20 |

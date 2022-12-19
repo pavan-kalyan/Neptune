@@ -1,13 +1,13 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link nav-brand" href="/">
+      <a class="nav-link nav-brand" href="/employee?user_id=<%=@user.id%>">
         <img src="/assets/neptune.jpeg" width="60" height="60" class="d-inline-block align-top" alt>
         <span style="font-size:25px">Neptune</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/profile?user_id=<%=@user_id%>">Profile</a>
+      <a class="nav-link" href="/profile?user_id=<%=@user.id%>">Profile</a>
     </li>
     <li class="nav-item">
       <%= link_to 'Logout', logout_path, :class => 'nav-link' %>
@@ -37,7 +37,7 @@
 
     <%= form_tag profile_path(:user_id => @user.id), :class => 'form' do %>
       <%= label_tag :current_plan, "Current Plan: " %>
-      <%= select_tag(:plan, options_for_select([['Free', "Free"], ['Paid', "Paid"]], :selected => @user.plan), {:class => 'form-control'}) %>
+      <%= select_tag(:plan, options_for_select([['Standard', "Standard"], ['Premium', "Premium"]], :selected => @user.plan), {:class => 'form-control'}) %>
       <br>
 
       <%= submit_tag "Update Plan", :class => 'btn btn-primary' %>
@@ -45,12 +45,17 @@
 
   </div>
 
+  <div class="home_container">
+    <p>
+      <%= link_to 'Back', employee_path('user_id' => @user.id), :class => 'btn btn-secondary col-2' %>
+    </p>
+  </div>
 </div>
 <div>
-  <% if !@user.nil? and @user.plan != 'Paid'%>
+  <% if !@user.nil? and @user.plan != 'Premium'%>
     <div class="adbanner">
-      <h3>Upgrade to Paid</h3>
-      <p> Upgrade to Paid plan to remove this ugly ad banner </p>
+      <h3>Upgrade to Premium</h3>
+      <p> Upgrade to Premium plan to remove this ugly ad banner </p>
     </div>
   <% end %>
 </div>
