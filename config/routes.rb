@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get 'edit-stake' => 'stakes#edit'
   post 'edit-stake' => 'stakes#edit_stake'
   get 'logout' => 'home#logout'
+  get 'profile' => 'profile#show'
+  post 'profile' => 'profile#edit'
 end

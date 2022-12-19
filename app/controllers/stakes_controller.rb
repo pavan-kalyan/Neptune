@@ -8,6 +8,7 @@ class StakesController < ApplicationController
     authenticate_user(user_id)
     type = User.find_by(id: user_id).role
     @role = type
+    @plan = User.find_by(id: user_id).plan
     company_id = User.find_by(id: user_id).company_id
     @company_name = Company.get_company_name_by_id(company_id)
     if type == "Executive"
@@ -38,6 +39,7 @@ class StakesController < ApplicationController
     authenticate_user(user_id)
     role = User.find_by(id: user_id).role
     @user_id = user_id
+    @plan = User.find_by(id: user_id).plan
     if role == "Executive"
       @stake = Stake.find_by(u_id: employee_id)
     else 

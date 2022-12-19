@@ -38,4 +38,6 @@ example input to login as Executive: email(abc2@gmail.com) and password(password
 Upon sign in, employees can view their stake in a company. If they try to edit their stake by clicking on their name they receive an error message.
 Upon sign in, executives can edit the stake of all employees in their company. These stakes are then saved and the changes are visible to both the employee and the executive.
 
+As an additional feature, we allow users to view their profiles. In their profile, they can choose whether they want to enrol in the standard plan or the premium plan. In the premium plan, users do not see an advertisement banner whereas standard plan users see advertisements.
 
+We also allow users to view the percentage of tokens they contain in the company. 

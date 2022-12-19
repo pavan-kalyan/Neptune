@@ -1,9 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">
-    <img src="/assets/neptune.jpeg" width="60" height="60" class="d-inline-block align-top" alt>
-    <h1>Neptune</h1>
-  </a>
-</nav>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link nav-brand" href="/employee?user_id=<%=@user_id%>">
+        <img src="/assets/neptune.jpeg" width="60" height="60" class="d-inline-block align-top" alt>
+        <span style="font-size:25px">Neptune</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/profile?user_id=<%=@user_id%>">Profile</a>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Logout', logout_path, :class => 'nav-link' %>
+    </li>
+  </ul>
+</div>
 
 <br>
 <br>
@@ -36,5 +46,15 @@
       <%= link_to 'Back', employee_path('user_id' => @user_id), :class => 'btn btn-secondary col-2' %>
     </p>
   </div>
+</div>
+
+<div>
+  <% if !@user_id.nil? and @plan != 'Premium'%>
+    <div class="adbanner">
+      <h3>Upgrade to Paid</h3>
+      <p> Upgrade to Paid plan to remove this ugly ad banner </p>
+      <p> <a href="/profile?user_id=<%=@user_id%>">Go to Profile to upgrade plan</a> </p>
+    </div>
+  <% end %>
 </div>
 

@@ -6,11 +6,11 @@ Feature: sign up
   Background: users in database and an employee logs in
 
     Given the following users exist:
-      | email | name | password | role | company_id |
-      | abc1@gmail.com | Sid | password | Employee | 1 |
-      | abc2@gmail.com | Pavan | password | Executive | 1 |
-      | abc3@gmail.com | Twisha | password | Employee | 1 |
-      | abc4@gmail.com | Ash | password | Employee | 1 |
+      | email | name | password | role | company_id | plan |
+      | abc1@gmail.com | Sid | password | Employee | 1 | Standard |
+      | abc2@gmail.com | Pavan | password | Executive | 1 | Premium |
+      | abc3@gmail.com | Twisha | password | Employee | 1 | Standard |
+      | abc4@gmail.com | Ash | password | Employee | 1 | Standard |
 
   Scenario: New Executive signs up successfully
     Given I am on the home page

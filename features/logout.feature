@@ -5,12 +5,12 @@ Feature: sign in
   Background: users in database and an employee logs in
 
     Given the following users exist:
-      | email | name | password | role | company_id |
-      | abc1@gmail.com | Sid | password | Employee | 1 |
-      | pk@columbia.edu | Pavan | password | Executive | 1 |
-      | abc3@gmail.com | Twisha | password | Employee | 1 |
-      | abc4@gmail.com | Ash | password | Employee | 1 |
-      | abc2@gmail.com | Pavan | password | Executive | 1 |
+      | email | name | password | role | company_id | plan |
+      | abc1@gmail.com | Sid | password | Employee | 1 | Standard |
+      | pk@columbia.edu | Pavan | password | Executive | 1 | Standard |
+      | abc3@gmail.com | Twisha | password | Employee | 1 | Standard  |
+      | abc4@gmail.com | Ash | password | Employee | 1 | Standard     |
+      | abc2@gmail.com | Pavan | password | Executive | 1 | Premium  |
     Given the following stakes exist:
       | c_id | u_id | value |
       | 1    | 3 | 20 |
@@ -21,7 +21,7 @@ Feature: sign in
       | name |
       | Martian |
 
-  Scenario: User logs in
+  Scenario: User logs out
     Given I am on the home page
     And I follow Sign In
     When I fill in the following:
@@ -31,3 +31,4 @@ Feature: sign in
     Then I should be on the Employee View page
     And I follow Logout
     Then I should see Neptune
+
