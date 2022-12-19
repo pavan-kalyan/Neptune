@@ -28,6 +28,10 @@ And /^(?:|I )should see (.+)$/ do |text|
   expect(page.body).to have_content(text)
 end
 
+And /^(?:|I )should not see (.+)$/ do |text|
+  expect(page.body).to have_no_content(text)
+end
+
 Then /^(?:|I )should be on the (.+) page$/ do |header_name|
   expect(page.body).to have_content(header_name)
 end
@@ -60,4 +64,8 @@ end
 
 And /^(?:|I )select (.+) as role$/ do |role|
   page.select(role, :from => 'role')
+end
+
+And /^(?:|I )select (.+) as plan$/ do |plan|
+  page.select(plan, :from => 'plan')
 end

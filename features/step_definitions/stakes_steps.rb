@@ -85,3 +85,7 @@ end
 #   When I fill in the following:
 #     | email | abc2@gmail.com |
 #     | password | password |
+
+And(/^I go to profile page of user with id (\d+)$/) do |user_id|
+  visit "/profile?user_id=#{user_id}"
+end

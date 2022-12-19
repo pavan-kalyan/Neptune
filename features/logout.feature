@@ -21,7 +21,7 @@ Feature: sign in
       | name |
       | Martian |
 
-  Scenario: User logs in
+  Scenario: User logs out
     Given I am on the home page
     And I follow Sign In
     When I fill in the following:
@@ -31,3 +31,4 @@ Feature: sign in
     Then I should be on the Employee View page
     And I follow Logout
     Then I should see Neptune
+

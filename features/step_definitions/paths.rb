@@ -23,6 +23,9 @@ module NavigationHelpers
     when /^the Sign In\s?page$/
 
       return '/sign-in'
+
+    when /^the Profile\s?page$/
+      return '/profile'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
