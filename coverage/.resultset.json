@@ -1,7 +1,32 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/models/user.rb": {
+      "/home/pavan/dev/Neptune/app/models/stake.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/pavan/dev/Neptune/app/com/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/pavan/dev/Neptune/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -10,14 +35,7 @@
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/com/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/controllers/profile_controller.rb": {
+      "/home/pavan/dev/Neptune/app/controllers/profile_controller.rb": {
         "lines": [
           1,
           null,
@@ -58,13 +76,13 @@
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/controllers/application_controller.rb": {
+      "/home/pavan/dev/Neptune/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/controllers/stakes_controller.rb": {
+      "/home/pavan/dev/Neptune/app/controllers/stakes_controller.rb": {
         "lines": [
           null,
           1,
@@ -108,6 +126,7 @@
           2,
           2,
           2,
+          2,
           1,
           null,
           1,
@@ -132,7 +151,7 @@
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/controllers/home_controller.rb": {
+      "/home/pavan/dev/Neptune/app/controllers/home_controller.rb": {
         "lines": [
           1,
           1,
@@ -236,7 +255,7 @@
           null
         ]
       },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/models/company.rb": {
+      "/home/pavan/dev/Neptune/app/models/company.rb": {
         "lines": [
           1,
           null,
@@ -248,54 +267,9 @@
           null,
           null
         ]
-      },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/models/stake.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/helpers/application_helper.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/helpers/profile_helper.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/helpers/stakes_helper.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1671490189
+    "timestamp": 1671492068
   },
   "Cucumber Features": {
     "coverage": {
@@ -321,9 +295,6 @@
           null,
           null,
           1,
-          null,
-          null,
-          null,
           42,
           42,
           42,
@@ -459,24 +430,6 @@
           null
         ]
       },
-      "/home/pavan/dev/Neptune/app/helpers/application_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/pavan/dev/Neptune/app/helpers/profile_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/pavan/dev/Neptune/app/helpers/stakes_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
       "/home/pavan/dev/Neptune/app/controllers/stakes_controller.rb": {
         "lines": [
           null,
@@ -588,6 +541,6 @@
         ]
       }
     },
-    "timestamp": 1671487325
+    "timestamp": 1671492084
   }
 }
