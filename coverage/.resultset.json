@@ -1,43 +1,75 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/pavan/dev/Neptune/app/models/company.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          2,
-          null,
-          null
-        ]
-      },
-      "/home/pavan/dev/Neptune/app/com/application_record.rb": {
+      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/models/user.rb": {
         "lines": [
           1,
           1,
-          null
-        ]
-      },
-      "/home/pavan/dev/Neptune/app/models/user.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          null,
           3,
           null,
           null
         ]
       },
-      "/home/pavan/dev/Neptune/app/controllers/stakes_controller.rb": {
+      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/com/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/controllers/profile_controller.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/controllers/stakes_controller.rb": {
         "lines": [
           null,
           1,
           1,
+          2,
           2,
           2,
           2,
@@ -100,13 +132,7 @@
           null
         ]
       },
-      "/home/pavan/dev/Neptune/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/pavan/dev/Neptune/app/controllers/home_controller.rb": {
+      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/controllers/home_controller.rb": {
         "lines": [
           1,
           1,
@@ -155,47 +181,47 @@
           1,
           1,
           1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           7,
-          2,
-          2,
-          2,
+          1,
+          1,
+          1,
           null,
+          6,
+          1,
+          1,
+          1,
           null,
+          5,
           5,
           1,
           1,
           1,
+          4,
+          1,
+          1,
           null,
+          null,
+          4,
           4,
           1,
           1,
           1,
           null,
+          null,
           3,
           3,
-          1,
-          1,
-          1,
-          2,
-          1,
-          1,
           null,
-          null,
-          2,
-          2,
-          0,
-          0,
-          0,
-          null,
-          null,
-          2,
-          2,
-          null,
-          2,
-          2,
-          2,
+          3,
+          3,
+          3,
           null,
           null,
           1,
@@ -210,7 +236,20 @@
           null
         ]
       },
-      "/home/pavan/dev/Neptune/app/models/stake.rb": {
+      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/models/company.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/models/stake.rb": {
         "lines": [
           1,
           null,
@@ -231,7 +270,7 @@
           null
         ]
       },
-      "/home/pavan/dev/Neptune/app/helpers/application_helper.rb": {
+      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/helpers/application_helper.rb": {
         "lines": [
           0,
           0
@@ -239,7 +278,15 @@
         "branches": {
         }
       },
-      "/home/pavan/dev/Neptune/app/helpers/stakes_helper.rb": {
+      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/helpers/profile_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/siddharthjain/Documents/columbia/fall22/esaas/proj/Neptune/app/helpers/stakes_helper.rb": {
         "lines": [
           0,
           0
@@ -248,7 +295,7 @@
         }
       }
     },
-    "timestamp": 1671481596
+    "timestamp": 1671490189
   },
   "Cucumber Features": {
     "coverage": {
