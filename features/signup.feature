@@ -7,10 +7,10 @@ Feature: sign up
 
     Given the following users exist:
       | email | name | password | role | company_id | plan |
-      | abc1@gmail.com | Sid | password | Employee | 1 | Free |
-      | abc2@gmail.com | Pavan | password | Executive | 1 | Paid |
-      | abc3@gmail.com | Twisha | password | Employee | 1 | Free |
-      | abc4@gmail.com | Ash | password | Employee | 1 | Free |
+      | abc1@gmail.com | Sid | password | Employee | 1 | Standard |
+      | abc2@gmail.com | Pavan | password | Executive | 1 | Premium |
+      | abc3@gmail.com | Twisha | password | Employee | 1 | Standard |
+      | abc4@gmail.com | Ash | password | Employee | 1 | Standard |
 
   Scenario: New Executive signs up successfully
     Given I am on the home page

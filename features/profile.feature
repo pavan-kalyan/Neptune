@@ -7,10 +7,10 @@ Feature: view and update profile
 
     Given the following users exist:
       | email | name | password | role | company_id | plan |
-      | abc1@gmail.com | Sid | password | Employee | 1 | Free |
-      | abc2@gmail.com | Pavan | password | Executive | 1 | Paid |
-      | abc3@gmail.com | Twisha | password | Employee | 1 | Free |
-      | abc4@gmail.com | Ash | password | Employee | 1 | Free    |
+      | abc1@gmail.com | Sid | password | Employee | 1 | Standard |
+      | abc2@gmail.com | Pavan | password | Executive | 1 | Premium |
+      | abc3@gmail.com | Twisha | password | Employee | 1 | Standard |
+      | abc4@gmail.com | Ash | password | Employee | 1 | Standard    |
     Given the following stakes exist:
       | c_id | u_id | value |
       | 1    | 3 | 20 |
@@ -31,10 +31,10 @@ Feature: view and update profile
     Then I should be on the Employee View page
     Then I follow Profile
     Then I should be on the Profile page
-    Then I should see Free
-    And I should see Upgrade to Paid
+    Then I should see Standard
+    And I should see Upgrade to Premium
 
-  Scenario: View paid profile
+  Scenario: View Premium profile
     Given I am on the home page
     And I follow Sign In
     When I fill in the following:
@@ -44,10 +44,10 @@ Feature: view and update profile
     Then I should be on the Employee View page
     Then I follow Profile
     Then I should be on the Profile page
-    Then I should see Paid
-    And I should not see Upgrade to Paid
+    Then I should see Premium
+    And I should not see Upgrade to Premium
 
-  Scenario: Edit profile from free to paid
+  Scenario: Edit profile from free to Premium
     Given I am on the home page
     And I follow Sign In
     When I fill in the following:
@@ -57,13 +57,13 @@ Feature: view and update profile
     Then I should be on the Employee View page
     Then I follow Profile
     Then I should be on the Profile page
-    Then I should see Free
-    And I select Paid as plan
+    Then I should see Standard
+    And I select Premium as plan
     And I press on Update Plan
     Then I follow Profile
     And I should be on the Profile page
-    Then I should see Paid
-    And I should not see Upgrade to Paid
+    Then I should see Premium
+    And I should not see Upgrade to Premium
 
   Scenario: logout and try to access profile page
     Given I am on the home page
